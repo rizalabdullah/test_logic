@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script type="text/javascript">
+
+    	function soal1(int) {
+    		var proses = int*3*2*1 ;
+    		return hasil= proses;
+    	}
+    	function soal_1(int) {
+    		var proses = int*7*6*5*4*3*2*1;
+    		return hasil= proses;
+    	}
+
+    	function soal_2(str) {
+    	  
+
+    	  var hasil="";
+    	  for(var i = str.length -1 ; i >= 0 ; i--){
+    	  	  hasil += str[i];
+    	  }
+    	  return hasil;
+    	}
+
+    	function soal_4() {
+    	  
+    	  let a = 3;
+    	  let b = 7;
+
+    	  return [a,b] = [b,a];
+    	}
+
+    	function soal_5(int) {
+    	  
+    	  let hasil = "";
+    	 if(int === 4){
+    	 	 hasil = 4 ;
+    	 }
+    	 else if(int === 20){
+    	 	 hasil = 20 ;
+    	 }
+    	 else if(int === 39){
+    	 	 hasil = 39 ;
+    	 }
+    	 else if(int === 104){
+    	 	 hasil = `silahkan masukan bilangan 1-100` ;
+    	 }
+    	  return hasil ;
+    	}
+
+    	function soal_6() {
+    	  
+    	let array = [1,4,7,9,12]
+    	  var hasil="";
+    	  for(var i = 1 ; i <= array.length -1 ; i++){
+    	  	  hasil += array[i];
+    	  }
+    	  return hasil;
+    	}
+
+    	function soal_10(kabisat) {
+    	  
+    	  let hasil = "";
+    	 if(kabisat === 2021){
+    	 	 hasil = `2021 bukan tahun kabisat` ;
+    	 }
+    	 else {kabisat === 2024}{
+    	 	 hasil = `2024 adalah tahun kabisat` ;
+    	 }
+ 
+    	  return hasil ;
+    	}
+
+    	
+    	  //soal nomor 9
+
+    	  var nilai = [4,2,6,88,3,11];
+    	            
+			for(var i=0;i<nilai.length;i++)
+        {    
+             if(i == 0)
+             { 
+              var nilai_mak = nilai[i];
+              var nilai_min = nilai[i];
+             }
+             else
+             {
+                    if(nilai[i] > nilai_mak)
+                    {
+                      nilai_mak = nilai[i];
+                    }
+                    else if(nilai[i] < nilai_min)
+                    {
+                      nilai_min = nilai[i];
+                    }
+             }              
+        }  
+
+
+
+    	console.log(soal1(4));
+    	console.log(soal_1(8));
+    	console.log(soal_2(`abcde`));
+    	console.log(soal_4());
+    	console.log(soal_5(104));
+    	console.log(soal_6());
+    	console.log(soal_10(2024));
+    	console.log('Data terbesar dari bilangan [4,2,6,88,3,11] adalah'+ nilai_mak );
+    	console.log('Data terkecil dari bilangan [4,2,6,88,3,11] adalah'+ nilai_min );
+
+
+    </script>
+</body>
+</html>
