@@ -9,8 +9,8 @@
     <script src='main.js'></script>
 </head>
 <body>
-    <script type="text/javascript">
 
+    <script type="text/javascript">
     	function soal1(int) {
     		var proses = int*3*2*1 ;
     		return hasil= proses;
@@ -20,8 +20,8 @@
     		return hasil= proses;
     	}
 
-    	function soal_2(str) {
-    	  
+    	function soal_2() {
+    	  var str = `abcde`
 
     	  var hasil="";
     	  for(var i = str.length -1 ; i >= 0 ; i--){
@@ -66,6 +66,16 @@
     	  return hasil;
     	}
 
+    	function soal_7() {
+    	  
+    	let array = [1,4,7,9,12]
+    	  var hasil="";
+    	  for(var i = 1 ; i <= array.length -4 ; i++){
+    	  	  hasil += array[i];
+    	  }
+    	  return hasil;
+    	}
+
     	function soal_10(kabisat) {
     	  
     	  let hasil = "";
@@ -79,10 +89,10 @@
     	  return hasil ;
     	}
 
-    	
-    	  //soal nomor 9
+  
+    	  function soal_9(){
 
-    	  var nilai = [4,2,6,88,3,11];
+    	  	  var nilai = [4,2,6,88,3,11];
     	            
 			for(var i=0;i<nilai.length;i++)
         {    
@@ -90,6 +100,7 @@
              { 
               var nilai_mak = nilai[i];
               var nilai_min = nilai[i];
+                
              }
              else
              {
@@ -104,17 +115,72 @@
              }              
         }  
 
+        return ( console.log(`Data terbesar dari bilangan [4,2,6,88,3,11] adalah ${nilai_mak} \nData terkecil dari bilangan [4,2,6,88,3,11] adalah ${nilai_min}`  )
+        		
+        		)
+    	  }
+
+    	  function soal_8() {
+
+    	  	var hasil = ``;
+    	  	var i3 = `edu`;
+    	  	var i5 = `work`;
+
+    	  	for(var i=1; i <= 15; i++ ){
+
+    	  		if(i == 3 || i == 9 || i == 12 ){
+    	  			hasil = `Edu`; 	  			
+    	  		}
+
+    	  		else if(i == 5 ){
+    	  			hasil = `Work`;
+    	  		}
+
+    	  		else if(i == 15 ){
+    	  			hasil = i3.concat(` `,i5);
+    	  		}
+
+    	  		else{
+    	  			hasil=i;
+    	  		}
+    	  		console.log(hasil)
+    	  	}
+    	  	return hasil
+    	  }
+
+    	  function printDigitValue(value){
+  var hasil = ``;	  	
+  var newArr = value.split('');
+  for(var i =0; i<newArr.length; i++){
+  		for(var j = newArr.length; j > i; j--){
+  			if(!isNaN(newArr[i])){
+    		hasil += newArr[i]
+   } 
+
+  		}
+  		hasil += `\n`
+    
+  }
+  return hasil ;
+}
+
+console.log(printDigitValue("9.86-A5.321"))
+    	
+
 
 
     	console.log(soal1(4));
     	console.log(soal_1(8));
-    	console.log(soal_2(`abcde`));
+    	console.log(soal_2());
     	console.log(soal_4());
     	console.log(soal_5(104));
     	console.log(soal_6());
+    	console.log(soal_7());
     	console.log(soal_10(2024));
-    	console.log('Data terbesar dari bilangan [4,2,6,88,3,11] adalah'+ nilai_mak );
-    	console.log('Data terkecil dari bilangan [4,2,6,88,3,11] adalah'+ nilai_min );
+    	soal_9();
+    	soal_8();
+
+    	 
 
 
     </script>
