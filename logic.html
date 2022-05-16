@@ -11,13 +11,14 @@
 <body>
 
     <script type="text/javascript">
-    	function soal1(int) {
-    		var proses = int*3*2*1 ;
-    		return hasil= proses;
-    	}
+    	
     	function soal_1(int) {
-    		var proses = int*7*6*5*4*3*2*1;
-    		return hasil= proses;
+
+    		hasil = ``;
+    		for(var i = int ; i > 0  ; i-- ) {
+    			hasil += i;
+    		}
+    		return hasil ;
     	}
 
     	function soal_2() {
@@ -41,17 +42,12 @@
     	function soal_5(int) {
     	  
     	  let hasil = "";
-    	 if(int === 4){
-    	 	 hasil = 4 ;
+    	 if( int ){
+    	 	 hasil = int ;
     	 }
-    	 else if(int === 20){
-    	 	 hasil = 20 ;
-    	 }
-    	 else if(int === 39){
-    	 	 hasil = 39 ;
-    	 }
-    	 else if(int === 104){
-    	 	 hasil = `silahkan masukan bilangan 1-100` ;
+
+    	 if(int){
+    	 	 hasil = Math.ceil(int) ;
     	 }
     	  return hasil ;
     	}
@@ -169,11 +165,11 @@ console.log(printDigitValue("9.86-A5.321"))
 
 
 
-    	console.log(soal1(4));
-    	console.log(soal_1(8));
+    	
+    	console.log(soal_1(5));
     	console.log(soal_2());
     	console.log(soal_4());
-    	console.log(soal_5(104));
+    	console.log(soal_5(0.4));
     	console.log(soal_6());
     	console.log(soal_7());
     	console.log(soal_10(2024));
